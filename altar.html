@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altar de Muertos Realista</title>
+    <style>
+        /* Fondo oscuro para simular una habitación de noche */
+        body {
+            background-color: #121212; 
+            color: #fff;
+            font-family: 'Georgia', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #ff9800;
+            text-shadow: 0px 0px 15px rgba(255, 152, 0, 0.8);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .altar-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        /* Estructura de los escalones con efecto 3D */
+        .nivel {
+            background: linear-gradient(to bottom, #6a1b9a, #4a148c);
+            border-top: 6px solid #e65100;
+            box-shadow: 0px 15px 25px rgba(0,0,0,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 20px;
+            position: relative;
+        }
+
+        .nivel-1 { 
+            width: 40%;
+            height: 180px;
+            z-index: 3;
+        }
+        .nivel-2 { 
+            width: 70%;
+            height: 160px;
+            margin-top: -30px;
+            z-index: 2;
+        }
+        .nivel-3 { 
+            width: 100%;
+            height: 160px;
+            margin-top: -30px;
+            z-index: 1;
+        }
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Marcos para las fotos */
+        .item img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 152, 0, 0.5);
+            background-color: #333; 
+        }
+
+        .item span {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #ffd54f;
+            text-shadow: 1px 1px 2px #000;
+        }
+
+        /* Marco especial para la foto principal */
+        .foto-principal img {
+            width: 130px;
+            height: 170px;
+            border-radius: 5px;
+            border: 5px solid #d4af37;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Ofrenda del Día de Muertos</h1>
+
+    <div class="altar-container">
+        <!-- Nivel 1 (Arriba): Foto principal -->
+        <div class="nivel nivel-1">
+            <div class="item foto-principal">
+                <!-- Se cargará un retrato de internet -->
+                <img src="img/perro.jpg" alt="Foto del difunto">
+                <span>En Memoria</span>
+            </div>
+        </div>
+
+        <!-- Nivel 2 (Medio): Comida y Bebida -->
+        <div class="nivel nivel-2">
+            <div class="item">
+                <img src="img/pan.jpg" alt="Pan">
+                <span>Pan Dulce</span>
+            </div>
+            <div class="item">
+                <img src="img/bebida.jpg" alt="Bebida">
+                <span>Bebida</span>
+            </div>
+            <div class="item">
+                <img src="img/fruta.jpg" alt="Fruta">
+                <span>Fruta</span>
+            </div>
+        </div>
+
+        <!-- Nivel 3 (Abajo): Flores, Velas y Calaveritas -->
+        <div class="nivel nivel-3">
+            <div class="item">
+                <img src="img/vela.jpg" alt="Vela">
+                <span>Luz (Vela)</span>
+            </div>
+            <div class="item">
+                <img src="img/cempasuchil.jpg" alt="Cempasúchil">
+                <span>Cempasúchil</span>
+            </div>
+            <div class="item">
+                <img src="img/calaverita.jpg" alt="Calaverita">
+                <span>Calaverita</span>
+            </div>
+            <div class="item">
+                <img src="img/vela.jpg" alt="Vela">
+                <span>Luz (Vela)</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
